@@ -9,7 +9,7 @@ const Bookings = () => {
     const axiosSecure = UseAxiosSecure();
 
     const url = `/bookings?email=${user?.email}`;
-    // const url = `http://localhost:5000/bookings?email=${user?.email}`;
+    // const url = `https://car-doctor-steel.vercel.app/bookings?email=${user?.email}`;
     // useEffect(() => {
     //     axios.get(url,  {withCredentials: true})
     //         .then(res => {
@@ -32,7 +32,7 @@ const Bookings = () => {
     const handleDelete = id => {
         const proceed = confirm('Are You sure you want to delete');
         if (proceed) {
-            fetch(`http://localhost:5000/bookings/${id}`, {
+            fetch(`https://car-doctor-steel.vercel.app/bookings/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -48,7 +48,7 @@ const Bookings = () => {
     }
 
     const handleBookingConfirm = id => {
-        fetch(`http://localhost:5000/bookings/${id}`, {
+        fetch(`https://car-doctor-steel.vercel.app/bookings/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

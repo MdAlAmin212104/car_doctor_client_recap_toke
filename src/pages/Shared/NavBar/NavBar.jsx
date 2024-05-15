@@ -11,7 +11,7 @@ const NavBar = () => {
     const handleLogOut = () => {
         logOut()
             .then(
-                axios.post('http://localhost:5000/logout', { withCredentials: true })
+                axios.post('https://car-doctor-steel.vercel.app/logout', { withCredentials: true })
                     .then(res => {
                         console.log(res.data);
                     })
